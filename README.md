@@ -25,7 +25,7 @@ Here's your **README.md** file formatted properly for GitHub:
 ## 📌 Installation  
 1. Clone the repository:  
   
-   git clone https://github.com/your-username/repository-name.git
+   git clone https://github.com/shreya23ps/Online-Examination-Portal
    
 2. Navigate to the project directory:  
   
