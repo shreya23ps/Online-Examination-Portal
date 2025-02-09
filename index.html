@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online IT Exam Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Background Image -->
+    <div id="bgImage"></div>
+
+    <!-- Webcam Positioned at Top-Right -->
+    <div id="webcamContainer" class="hidden">
+        <video id="webcam" autoplay></video>
+    </div>
+
+    <!-- Login Page -->
+    <div id="loginPage" class="container animate__animated animate__fadeIn">
+        <h2>🎉 Online Exam Portal 🎉</h2>
+        <div class="input-group">
+            <input type="text" id="name" placeholder="Enter your Name" required>
+            <input type="password" id="password" placeholder="Enter Password" required>
+        </div>
+        <div class="terms-container">
+            <input type="checkbox" id="terms">
+            <label for="terms">I agree to the terms and conditions</label>
+        </div>
+        <button id="startTest" disabled>Start Test</button>
+    </div>
+
+    <!-- Test Page -->
+    <div id="testPage" class="container hidden animate__animated animate__fadeIn">
+        <div id="topBar">
+            <h2>📝 Test Time! 📝</h2>
+            <div id="timer">⏳ Time Left: <span id="timeLeft">10:00</span></div>
+        </div>
+        <div id="questionNumber"></div>
+        <div id="questionContainer"></div>
+        <div class="navigation">
+            <button id="prevBtn" class="hidden">⬅️ Previous</button>
+            <button id="nextBtn">Next ➡️</button>
+            <button id="submitTest" class="hidden">✅ Submit Test</button>
+        </div>
+    </div>
+
+    <!-- Question Matrix -->
+    <div id="questionMatrix" class="question-matrix hidden"></div>
+
+    <!-- Results Page -->
+    <div id="resultPage" class="container hidden animate__animated animate__fadeIn">
+        
+        <div id="resultContent">
+            <p id="resultText"></p>
+            <p id="remainingTime"></p>
+            <div id="capturedImageContainer"></div>
+        </div>
+        <div class="result-actions">
+            <button onclick="location.reload()">🔄 Restart</button><br><br>
+            <button id="downloadResult" class="hidden">📥 Download Result</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
